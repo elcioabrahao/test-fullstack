@@ -2,10 +2,12 @@ package com.test.persistence;
 
 import com.test.model.entity.User;
 import org.springframework.boot.CommandLineRunner;
+import org.springframework.stereotype.Component;
 
 import java.util.ArrayList;
 import java.util.List;
 
+@Component
 public class DBInsert implements CommandLineRunner {
 
     private UserRepository userRepository;
@@ -22,13 +24,13 @@ public class DBInsert implements CommandLineRunner {
         User user3 = new User("Mario de Andrade","mandrade@poeta.com","565989898656", "m");
         User user4 = new User("Ligia Fagundes Teles","ligiateles@escritora.com","656567978", "f");
 
-        List<User> users = new ArrayList();
+        List<User> users = new ArrayList<>();
 
         users.add(user1);
         users.add(user2);
         users.add(user3);
         users.add(user4);
 
-        this.userRepository.save(users);
+        this.userRepository.saveAll(users);
     }
 }

@@ -5,6 +5,7 @@ import com.test.exception.ResourceNotFoundException;
 import com.test.model.entity.User;
 import com.test.service.UserService;
 import org.springframework.http.ResponseEntity;
+import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;

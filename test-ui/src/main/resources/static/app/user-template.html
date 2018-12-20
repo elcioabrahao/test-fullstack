@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Listar Todos os Usuários</title>
+    <style>
+        table, td  {
+            border: 1px solid grey;
+            border-collapse: collapse;
+            padding: 5px;
+        }
+    </style>
+</head>
+<body>
+<br/>
+<div class="container" ng-app="test" ng-controller="AllUserController">
+    <table>
+        <tr>
+            <td>ID</td>
+            <td>Nome</td>
+            <td>Email</td>
+            <td>Telefone</td>
+            <td>Sexo</td>
+
+        </tr>
+        <tr ng-repeat="user in response track by $index">
+            <td ng-if="$odd" style="background-color:#f1f1f1">{{ user.id }}</td>
+            <td ng-if="$even">{{ user.id }}</td>
+            <td ng-if="$odd" style="background-color:#f1f1f1">{{ user.nome }}</td>
+            <td ng-if="$even">{{ user.nome }}</td>
+            <td ng-if="$odd" style="background-color:#f1f1f1">{{ user.email }}</td>
+            <td ng-if="$even">{{ user.email }}</td>
+            <td ng-if="$odd" style="background-color:#f1f1f1">{{ user.telefone }}</td>
+            <td ng-if="$even">{{ user.telefone }}</td>
+            <td ng-if="$odd" style="background-color:#f1f1f1">{{ user.sexo }}</td>
+            <td ng-if="$even">{{ user.sexo }}</td>
+        </tr>
+    </table>
+
+</div>
+
+</body>
+</html>

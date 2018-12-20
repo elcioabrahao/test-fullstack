@@ -13,3 +13,4 @@ angular.module('test', ['ui.router'])
 	function ($rootScope, $state) {
 
 }]);
+

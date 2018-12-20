@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cadastrar Usuário</title>
+</head>
+<body>
+
+<div class="container" ng-app="test">
+
+    <h3 style="color:blue">Cadastro de Novo Usuário</h3>
+
+    <div ng-controller="UserAddController">
+        <form class="form-horizontal" name="userForm" ng-submit="submitForm()">
+            <div class="form-group">
+                <label class="control-label col-sm-2" for="nomeID">Nome:</label>
+                <div class="col-sm-5">
+                    <input type="text" class="form-control" name="nome" id="nomeID"
+                           placeholder="Entre Nome" ng-model="nome"/>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="control-label col-sm-2" for="emailID">Email:</label>
+                <div class="col-sm-5">
+                    <input type="text" class="form-control" name="email" id="emailID"
+                           placeholder="Entre Email" ng-model="email"/>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="control-label col-sm-2" for="telefoneID">Telefone:</label>
+                <div class="col-sm-5">
+                    <input type="text" class="form-control" name="telefone" id="telefoneID"
+                           placeholder="Entre Telefone" ng-model="telefone"/>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="control-label col-sm-2" for="sexoID">Sexo:</label>
+                <div class="col-sm-5">
+                    <input type="text" class="form-control" name="sexo" id="sexoID"
+                           placeholder="Entre m ou f" ng-model="sexo"/>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-sm-offset-2 col-sm-10">
+                    <button type="submit" class="btn btn-default">Salvar</button>
+                </div>
+            </div>
+        </form>
+
+    </div>
+
+</div>
+
+
+</body>
+</html>

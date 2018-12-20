@@ -30,7 +30,7 @@ public class UserService {
 
     public User saveUser(User user) throws ResourceNotFoundException{
         this.userRepository.save(user);
-        return findUserById(user.getId());
+        return user;
     }
 
     public User updateUser(User userDetails, Long userId)throws ResourceNotFoundException{
